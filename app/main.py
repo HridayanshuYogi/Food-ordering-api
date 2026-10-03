@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Food Ordering API is running"}
+    return {"message": "Welcome to restaurant"}
 
 
 @app.get("/menu")
