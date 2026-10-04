@@ -30,7 +30,26 @@ def get_menu():
         ]
     }
 
-
+@app.get("/orders")
+def get_orders():
+    return {
+        "orders": [
+            {
+                "id": 1,
+                "customer": "Rahul",
+                "item": "Margherita Pizza",
+                "quantity": 2,
+                "status": "preparing"
+            },
+            {
+                "id": 2,
+                "customer": "Ananya",
+                "item": "Veg Burger",
+                "quantity": 1,
+                "status": "delivered"
+            }
+        ]
+    }
 
 
 
