@@ -12,8 +12,36 @@ def home():
 def get_menu():
     return {
         "items": [
-            {"id": 1, "name": "Pizza", "price": 250},
-            {"id": 2, "name": "Burger", "price": 150},
-            {"id": 3, "name": "Biryani", "price": 200}
+            {
+                "id": 1,
+                "name": "Margherita Pizza",
+                "price": 299
+            },
+            {
+                "id": 2,
+                "name": "Veg Burger",
+                "price": 199
+            },
+            {
+                "id": 3,
+                "name": "French Fries",
+                "price": 99
+            }
         ]
     }
+
+
+
+
+
+
+# git push -u origin main
+# The push means:
+
+#Take the commits that exist in my local Git repository and send them to the remote repository.
+
+#The -u establishes origin/main as the upstream branch, so later you can usually just do:
+
+#git push
+
+#instead of specifying everything again.
