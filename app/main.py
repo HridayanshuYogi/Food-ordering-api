@@ -1,5 +1,10 @@
 from fastapi import FastAPI
+from fastapi import Depends
+from sqlalchemy.orm import Session
 
+from app.database import get_db
+from app.models import Food
+from app.schemas import FoodCreate, FoodResponse
 app = FastAPI()
 
 
@@ -50,6 +55,24 @@ def get_orders():
             }
         ]
     }
+@app.post("/foods", response_model=FoodResponse, status_code=201)
+def create_food(food: FoodCreate, db: Session = Depends(get_db)):
+    db_food = Food(**food.model_dump())
+
+    db.add(db_food)
+    db.commit()
+    db.refresh(db_food)
+
+    return db_food
+
+
+@app.get("/foods")
+def get_foods(db: Session = Depends(get_db)):
+    foods = db.query(Food).all()
+    return foods
+
+
+
 
 
 
