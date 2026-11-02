@@ -25,7 +25,7 @@ def get_db():
 # from sqlalchemy import create_engine
 # from sqlalchemy.orm import sessionmaker, declarative_base
 
-# DATABASE_URL = "postgresql+psycopg2://postgres:i will win@localhost/food_ordering"
+# DATABASE_URL = "postgresql+psycopg2://postgres:i will win@localhost/food_ordering" , i_love_linux@12
 
 # engine = create_engine(DATABASE_URL)
 
